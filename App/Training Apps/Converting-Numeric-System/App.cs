@@ -10,24 +10,12 @@ namespace CSharpFundamentals.Training_Apps.Converting_Numeric_System
     {
         static void Main(string[] argu)
         {
-            //Binary(25);
-            //Octal(25);
-            //Hexa(25);
-            Console.WriteLine(Rot13("test"));
-        }
-
-
-        public static string Rot13(string message)
-        {
-            char[] MChar = message.ToCharArray();
             
-            for(int i=0; i< MChar.Length; i++)
-            {
-                MChar[i] = Convert.ToChar(Convert.ToUInt32(MChar[i]) + 13);
-            }
-            message = MChar.ToString();
-            return new string (MChar);
+            
         }
+
+
+        
 
         static void Binary(int num)
         {
