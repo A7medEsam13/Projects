@@ -1,0 +1,14 @@
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\bin\Debug\net8.0\problem solving.exe
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\bin\Debug\net8.0\problem solving.deps.json
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\bin\Debug\net8.0\problem solving.runtimeconfig.json
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\bin\Debug\net8.0\problem solving.dll
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\bin\Debug\net8.0\problem solving.pdb
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.GeneratedMSBuildEditorConfig.editorconfig
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.AssemblyInfoInputs.cache
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.AssemblyInfo.cs
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.csproj.CoreCompileInputs.cache
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.dll
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\refint\problem solving.dll
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.pdb
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\problem solving.genruntimeconfig.cache
+E:\Simple Math Exepression Evaluation\Math-Exepression\problem solving\obj\Debug\net8.0\ref\problem solving.dll
