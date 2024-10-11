@@ -12,3 +12,4 @@ E:\Simple Math Exepression Evaluation\Math-Exepression\App\obj\Debug\net8.0\refi
 E:\Simple Math Exepression Evaluation\Math-Exepression\App\obj\Debug\net8.0\CSharpFundamentals.pdb
 E:\Simple Math Exepression Evaluation\Math-Exepression\App\obj\Debug\net8.0\CSharpFundamentals.genruntimeconfig.cache
 E:\Simple Math Exepression Evaluation\Math-Exepression\App\obj\Debug\net8.0\ref\CSharpFundamentals.dll
+E:\Simple Math Exepression Evaluation\Math-Exepression\App\obj\Debug\net8.0\CSharpFundamentals.sourcelink.json

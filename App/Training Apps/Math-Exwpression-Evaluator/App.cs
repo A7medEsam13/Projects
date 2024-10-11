@@ -8,19 +8,19 @@ namespace CSharpFundamentals.Training_Apps.Math_Exwpression_Evaluator
 {
     internal class App
     {
-        //static void Main(string[] args)
-        //{
-        //    while (true)
-        //    {
-        //        Console.Write("Please Enter math exepression: ");
-        //        var input = Console.ReadLine();
-        //        var exp = ExepressionParser.Parse(input);
-        //        Console.WriteLine($"Left side : {exp.LeftSideOperand} , Operation : {exp.Operation} , Right Side : {exp.RightSideOperand}");
-        //        Console.WriteLine($"{input} = {EvaluateExepression(exp)}");
+        static void Run(string[] args)
+        {
+            while (true)
+            {
+                Console.Write("Please Enter math exepression: ");
+                var input = Console.ReadLine();
+                var exp = ExepressionParser.Parse(input);
+                Console.WriteLine($"Left side : {exp.LeftSideOperand} , Operation : {exp.Operation} , Right Side : {exp.RightSideOperand}");
+                Console.WriteLine($"{input} = {EvaluateExepression(exp)}");
 
-        //    }
+            }
 
-        //}
+        }
 
         private static object EvaluateExepression(MathExepression expr)
         {
@@ -49,9 +49,6 @@ namespace CSharpFundamentals.Training_Apps.Math_Exwpression_Evaluator
             }
         }
 
-        public static void Run(string[] args)
-        {
-            
-        }
+        
     }
 }

@@ -8,7 +8,7 @@ namespace CSharpFundamentals.Training_Apps.Converting_Numeric_System
 {
     internal class App
     {
-        static void Main(string[] argu)
+        static void Run(string[] argu)
         {
             
             
