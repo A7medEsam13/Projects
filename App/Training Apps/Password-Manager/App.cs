@@ -12,45 +12,72 @@ namespace CSharpFundamentals.Training_Apps.Password_Manager
         public static void Run(string[] args)
         {
             ReadPasswords();
-            while (true)
+            
+            Console.WriteLine("Enter Your Password : ");
+            var pass = Console.ReadLine();
+            if(_PasswordEntries.ContainsKey("Master Password"))
             {
-                
-                Console.WriteLine("Please, select an option: ");
-                Console.WriteLine("1. List all passwords.");
-                Console.WriteLine("2. Add/Change password.");
-                Console.WriteLine("3. Get password.");
-                Console.WriteLine("4. Delete password.");
-
-                var selectedOption = Console.ReadLine();
-                if (selectedOption == "1")
+                if (_PasswordEntries["Master Password"] == pass)
                 {
-                    ListAllPasswords();
-                }
-                    else if (selectedOption == "2") 
+                    while (true)
                     {
-                        AddOrChangePassword();
-                    }
-                    else if (selectedOption == "3") 
-                    {
-                        GetPassword();
-                    }
-                    else
-                    {
-                        DeletePassword();
-                    }
+                        Console.WriteLine("Please, select an option: ");
+                        Console.WriteLine("1. List all passwords.");
+                        Console.WriteLine("2. Add/Change password.");
+                        Console.WriteLine("3. Get password.");
+                        Console.WriteLine("4. Delete password.");
+                        Console.WriteLine("5. Exit.");
 
-                    Console.WriteLine("--------------------------------------------------");
+                        var selectedOption = Console.ReadLine();
+                        if (selectedOption == "1")
+                        {
+                            ListAllPasswords();
+                        }
+                        else if (selectedOption == "2")
+                        {
+                            AddOrChangePassword();
+                        }
+                        else if (selectedOption == "3")
+                        {
+                            GetPassword();
+                        }
+                        else if(selectedOption == "4")
+                        {
+                            DeletePassword();
+                        }
+                        else
+                        {
+                            break;
+                        }
+
+                        Console.WriteLine("--------------------------------------------------");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect Password!\nTry Again!");
                 }
             }
-
-            private static void ListAllPasswords()
+            else
             {
+                _PasswordEntries.Add("Master Password", pass);
+                SavePasswords();
+            }
+            Console.WriteLine("\n--------------------------------------------------\n");
+            
                 
-                foreach (var entry in _PasswordEntries)
-                {
+                
+        }
+
+        private static void ListAllPasswords()
+        {
+                
+           foreach (var entry in _PasswordEntries)
+           {
+                if(!(entry.Key=="Master Password"))
                     Console.WriteLine($"{entry.Key} = {entry.Value}");
-                }
-            }
+           }
+        }
 
             private static void AddOrChangePassword()
             {
@@ -74,12 +101,12 @@ namespace CSharpFundamentals.Training_Apps.Password_Manager
             {
                 Console.Write("Enter The Web site name: ");
                 var siteName = Console.ReadLine();
-            if(_PasswordEntries.ContainsKey(siteName))
+                if(_PasswordEntries.ContainsKey(siteName))
                 Console.WriteLine($"Password of {siteName} = {_PasswordEntries[siteName]}");
-            else
-            {
-                Console.WriteLine("Password Of this site name doesn't exist");
-            }
+                else
+                {
+                    Console.WriteLine("Password Of this site name doesn't exist");
+                }
             }
 
             private static void DeletePassword()
@@ -95,15 +122,15 @@ namespace CSharpFundamentals.Training_Apps.Password_Manager
         private static void ReadPasswords()
         {
             if (File.Exists("Passwords.txt"))
-            {
+          {
                 var PasswordLines = File.ReadAllText("Passwords.txt");
                 foreach (var line in PasswordLines.Split(Environment.NewLine))
                 {
                     if (!string.IsNullOrEmpty(line))
                     {
                         var EqualIndex = line.IndexOf('=');
-                        var AppName = line.Substring(0, EqualIndex);
-                        var password = line.Substring(EqualIndex + 1);
+                        var AppName = line.Substring(0, EqualIndex).Trim();
+                        var password = line.Substring(EqualIndex + 1).Trim();
                         _PasswordEntries.Add(AppName, password);
                     }
                 }
